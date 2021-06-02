@@ -47,6 +47,7 @@ int main()
         }
 
     }
+
     for(i = 0; i < num; i++)
     {
         if(res[i][1] == 0)
@@ -67,6 +68,12 @@ int main()
             else if(res[j][1] == 0)
                 break;
         }
+    
+    while(res[i][1])
+    {
+        for(j = 0; j < res[i][1]; j++)
+            printf("%d ",res[i][0]);
+        i++;
     }
    return 0;
 
