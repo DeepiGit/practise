@@ -47,6 +47,27 @@ int main()
         }
 
     }
+
+    for(i = 0; i < num; i++)
+    {
+        if(res[i][1] == 0)
+            break;
+        for(j = i + 1; j < num; j++)
+        {
+            if(res[i][1] < res[j][1])
+            {
+                swap(&res[i][1], &res[j][1]);
+                swap(&res[i][0], &res[j][0]);
+            }
+            else if(res[i][1] == res[j][1])
+                if(res[i][0] > res[j][0])
+                {
+                    swap(&res[i][1], &res[j][1]);
+                    swap(&res[i][0], &res[j][0]);
+                }
+            else if(res[j][1] == 0)
+                break;
+        }
     
     while(res[i][1])
     {
