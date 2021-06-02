@@ -23,6 +23,30 @@ int main()
         res[0][i] = 0;
         res[1][i] = 0;
     }
+    
+    j = 0;
+    for(int k = 0; k < num; k++)
+    {
+        for(i = 0; i < num; i++)
+        {
+            if(res[i][0] == arr[j])
+            {
+                res[i][1]++;
+                j++;
+                printf("Step: %d, i = %d %d %d\n", k, i, res[i][0], res[i][1]);
+                break;
+            }
+            else if(res[i][0] == 0)
+            {
+                res[i][0] = arr[j];
+                res[i][1]++;
+                j++;
+                printf("Step: %d, i = %d %d %d\n", k, i, res[i][0], res[i][1]);
+                break;
+            }
+        }
+
+    }
    return 0;
 
 }
