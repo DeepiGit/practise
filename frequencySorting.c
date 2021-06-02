@@ -47,6 +47,13 @@ int main()
         }
 
     }
+    
+    while(res[i][1])
+    {
+        for(j = 0; j < res[i][1]; j++)
+            printf("%d ",res[i][0]);
+        i++;
+    }
    return 0;
 
 }
