@@ -17,6 +17,12 @@ int main()
     int arr[num];
     for(i = 0; i < num; i++)
         scanf("%d",&arr[i]);
+    int res[num][2];
+    for(i = 0; i < num; i++)
+    {
+        res[0][i] = 0;
+        res[1][i] = 0;
+    }
    return 0;
 
 }
